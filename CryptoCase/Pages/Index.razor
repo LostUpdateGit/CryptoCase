@@ -1,0 +1,31 @@
+﻿@page "/"
+@using CryptoCase.Models
+@using CryptoCase.Services
+@inject MainService mainService
+
+<Row Gutter="24">
+    <Col Span="12">
+    <Card Title="Завершенные:">
+        <Body>
+            <Table TItem="Request" DataSource="@mainService.RequestHistory">
+                <Column @bind-Field="@context.ChatId"></Column>
+                <Column @bind-Field="@context.Username"></Column>
+                <Column @bind-Field="@context.DateTime"></Column>
+                <Column @bind-Field="@context.TimeInWork"></Column>
+            </Table>
+        </Body>
+    </Card>
+    </Col>
+    <Col Span="12">
+    <Card Title="Создаются:">
+        <Body>
+            <Table DataSource="@mainService.casesPendingPayment">
+                <Column @bind-Field="@context.chatId"></Column>
+                <Column @bind-Field="@context.paid"></Column>
+                <Column @bind-Field="@context.ready"></Column>
+                <Column @bind-Field="@context.timeInWork"></Column>
+            </Table>
+        </Body>
+    </Card>
+    </Col>
+</Row>
