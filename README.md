@@ -1,5 +1,6 @@
 # CryptoCase
 Сервер телеграм бота @LostUpdate_BinancePortfolioBot.
+ASP.NET Blazor Server
 Составляет *.xlsx фаил с подробным составом вашего спотового портфеля на Binance.
 
 ![alt text](https://i.ibb.co/pKRsQdv/Example.jpg)
